@@ -1,12 +1,15 @@
 
 Q1.  Create a repository "Hello World" on github as well as on the local system. Create a new branch from Master and save a file (HelloWorld.txt) into that remote Repository.
-
+Ans: https://github.com/karanborate/Hello-World/tree/HelloWorldBranch
 
 Q2. Create another branch from Master and add two files into that folder (HelloAgian.txt and IgnoreThis.txt) but make sure that "IgnoreThis.txt" does not show up on Remote Repository.
-
+Ans: https://github.com/karanborate/Hello-World/tree/HelloWorldAgain
  
 Q3.  i) Now create a new Branch from master and save the file "Hello2Time.txt" into the remote repository.   
+    Ans: https://github.com/karanborate/Hello-World/tree/HelloWorldTwo
     
     ii) Now delete "Hello2Time.txt" from local and save new changes on remote as well.
+    Ans: https://github.com/karanborate/Hello-World/tree/HelloWorldTwo
     
     iii) Now restore "Hello2Time.txt" by reverting back previous commit.  (git log & git revert, COMMIT ID)
+    Ans: https://github.com/karanborate/Hello-World/tree/HelloWorldTwo
