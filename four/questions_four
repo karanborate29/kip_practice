@@ -1,0 +1,13 @@
+Q.1  Print all possible duplicate characters from a given String?
+Eg:- Input :- "Hello World"
+Output :-  
+l
+O
+
+Q.2 WAP  to check if two strings are rotations of each other?
+	Eg:  string1: abcd     string2; dcba
+Return 0 
+
+Q.3 WAP to check if a given String is Palindrome or not?
+Ex:Mom is palindrome
+
