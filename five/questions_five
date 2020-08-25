@@ -1,0 +1,18 @@
+Q.1 Write a program to add, subtract and multiply two complex numbers using structures to function.
+
+Q.2 Write a program by creating an 'Strudent' Structure and ‘Scores’ Structure with following methods :-
+
+Student
+[name : String ; roll_no : Int ; scoreOfEachSubject : Score ;  department : String, School : String ]
+
+Score
+[Hindi, English, Maths, Science]
+
+1. new()  :- To initialize Student objects.
+
+2. get_average() :- To get average of all scores.
+
+3. pass_student() :- Add numbers to student’s subject score if score is less than 35.
+                 Eg. Suppose a student's maths score is 31, Hindi score is 24. Then this function will automatically add 4 numbers (To make it 35) to maths score and 11 numbers to Hindi score (To make it 35).
+
+4. compare_student(Argument : Another Student)  => Print difference of each subject’s score.
