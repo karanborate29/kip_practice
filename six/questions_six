@@ -1,0 +1,17 @@
+Q. 1. Use pattern matching to find that whether a point lies on X-Axis, Y-Axis or on which quadrant ?
+
+  Input :- [(2,-2),(-1,-2) ...]
+
+ Output :- [Position::Second(Coordinate::Abscissa(2), Coordinate::Ordinate(-2)), 
+Position::Third(Coordinate::Abscissa(-1), Coordinate::Ordinate(-2)) ....]
+
+Q.2 . Create enum for :- 
+
+{No If/Else only pattern matching}
+{Hint :- You can use vector}
+
+ Input :-
+  [(192,0,1,1) , (230,45,6,7) , (170,45,23,45), (198,5,6,4) ....]  // List Of Tuple
+
+ Output :- 
+[Ip::ClassC(192.0.1.1) , Ip::ClassD(230.45.6.7 ) , Ip::ClassB (170.45.23.45), Ip::ClassC(198.5.6.4) ... ]. // List Of Enum(String)
