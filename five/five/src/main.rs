@@ -1,3 +1,4 @@
+//Assignment Five
 extern crate num;
 use num::Complex;
 
@@ -24,17 +25,26 @@ fn opration_on_complex() {
 }
 
 fn add(data: &DataInit) -> Complex<i32> {
-    data.num1 + data.num2
+    data.num1 + data.num2 //Addition
 }
 
 fn sub(data: &DataInit) -> Complex<i32> {
-    data.num1 - data.num2
+    data.num1 - data.num2 //Substraction
 }
 
 fn mul(data: &DataInit) -> Complex<i32> {
-    data.num1 * data.num2
+    data.num1 * data.num2 //Multiplication
 }
 
+//Score Structure
+struct Score {
+    hindi: i32,
+    english: i32,
+    maths: i32,
+    science: i32,
+}
+
+//Student Structure
 struct Student {
     name: String,
     roll_no: i32,
@@ -43,59 +53,83 @@ struct Student {
     school: String,
 }
 
-struct Score {
-    hindi: i32,
-    english: i32,
-    maths: i32,
-    science: i32,
+//Calling_Second_Question
+fn opration_on_struct() {
+    let data: Student = Student::new(               //Static Method
+        //New Method -> To initialize
+        String::from("John"),
+        "tech".to_string(),
+        "zcoer".to_string(),
+        13,
+        24,
+        50,
+        31,
+        70,
+    );
+
+    let avg = Score::get_avg(&data.score_of_each_subject); //get_average Method -> To get Average
+    println!("{}", avg);
+    let _student_passed: Score = pass_student(&data);
 }
 
-fn opration_on_struct() {
-    fn new() -> Student {
-        //Q2_1//  To initialize Student objects.
-
+impl Student {
+    //Implementing Method
+    fn new(
+        get_name: String,
+        get_dept: String,
+        get_school: String,
+        get_roll: i32,
+        get_hindi: i32,
+        get_eng: i32,
+        get_maths: i32,
+        get_science: i32,
+    ) -> Student {
         Student {
-            name: String::from("john"),
-            department: String::from("tech"),
-            school: String::from("zcoer"),
-            roll_no: 1,
+            name: get_name,
+            department: get_dept,
+            school: get_school,
+            roll_no: get_roll,
             score_of_each_subject: Score {
-                hindi: 24,
-                english: 50,
-                maths: 31,
-                science: 70,
+                hindi: get_hindi,
+                english: get_eng,
+                maths: get_maths,
+                science: get_science,
             },
         }
     }
-
-    let sr:Student = new(); //Q2_2//    To get average of all scores.
-
-    println!("Details of {} are as follows:\n", sr.name);
-    println!(
-        "Name: {}\n Roll-No: {}\n Department: {}\n School: {}\n ",
-        sr.name, sr.roll_no, sr.department, sr.school
-    );
-
-    let src:Score = sr.score_of_each_subject;
-    let avg :i32= src.hindi + src.english + src.maths + src.science;
-    println!("Average of 4 subject is: {}\n", avg / 4);
-
-    //Q2_3//    Add numbers to student’s subject score if score is less than 35.
-    println!(
-        "Marks required to pass in Hindi is {}\n",
-        src.marks_required_in_hindi()
-    );
-    println!(
-        "Marks required to pass in Maths is {}\n",
-        src.marks_required_in_maths()
-    );
 }
 
 impl Score {
-    fn marks_required_in_hindi(&self) -> i32 {
-        35 - self.hindi //return difference
+    //Implementing Method
+    fn get_avg(&self) -> i32 {
+        let avg = self.hindi + self.maths + self.english + self.science;
+        let result: i32 = avg / 4;
+        result
     }
-    fn marks_required_in_maths(&self) -> i32 {
-        35 - self.maths //return difference
+}
+
+fn pass_student(data: &Student) -> Score {
+    let mut hindi_pass = data.score_of_each_subject.hindi;
+    if hindi_pass < 35 {
+        hindi_pass = 35;
     }
+    let mut english_pass = data.score_of_each_subject.english;
+    if english_pass < 35 {
+        english_pass = 35;
+    }
+    let mut maths_pass = data.score_of_each_subject.maths;
+    if maths_pass < 35 {
+        maths_pass = 35;
+    }
+    let mut science_pass = data.score_of_each_subject.science;
+    if science_pass < 35 {
+        science_pass = 35;
+    }
+    let updated: Score = Score {
+        hindi: hindi_pass,
+        english: english_pass,
+        maths: maths_pass,
+        science: science_pass,
+    };
+    updated
 }
