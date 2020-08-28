@@ -1,6 +1,4 @@
 //Assignment Five
-extern crate num;
-use num::Complex;
 
 fn main() {
     println!("Hello, world!\n");
@@ -8,32 +6,24 @@ fn main() {
     opration_on_struct(); //Q2-> 1-> 2-> 3
 }
 
-struct DataInit {
-    num1: num::Complex<i32>,
-    num2: num::Complex<i32>,
+struct ComplexStruct {
+    real: i32,
+    imag: i32,
 }
 
 fn opration_on_complex() {
-    let data = DataInit {
-        num1: Complex::new(2, 4),
-        num2: Complex::new(3, 6),
-    };
-
-    println!("Addition is: {}\n", add(&data));
-    println!("Substraction is: {}\n", sub(&data));
-    println!("Multiplication is: {}\n", mul(&data));
+    let num1 = ComplexStruct { real: 2, imag: 4 };
+    let num2 = ComplexStruct { real: 3, imag: 6 };
+    ComplexStruct::operate(num1, num2); //Calling static Method
 }
 
-fn add(data: &DataInit) -> Complex<i32> {
-    data.num1 + data.num2 //Addition
-}
-
-fn sub(data: &DataInit) -> Complex<i32> {
-    data.num1 - data.num2 //Substraction
-}
-
-fn mul(data: &DataInit) -> Complex<i32> {
-    data.num1 * data.num2 //Multiplication
+impl ComplexStruct {
+    //Implementing static Method
+    fn operate(num1: ComplexStruct, num2: ComplexStruct) {
+        println!("{} + {}i ", num1.real + num2.real, num1.imag + num2.imag); //Addition
+        println!("{} + {}i ", num1.real - num2.real, num1.imag - num2.imag); //Substraction
+        println!("{} + {}i ", num1.real * num2.real, num1.imag * num2.imag); //Multiplication
+    }
 }
 
 //Score Structure
@@ -55,7 +45,8 @@ struct Student {
 
 //Calling_Second_Question
 fn opration_on_struct() {
-    let data: Student = Student::new(               //Static Method
+    let data: Student = Student::new(
+        //Static Method
         //New Method -> To initialize
         String::from("John"),
         "tech".to_string(),
@@ -67,9 +58,11 @@ fn opration_on_struct() {
         70,
     );
 
-    let avg = Score::get_avg(&data.score_of_each_subject); //get_average Method -> To get Average
-    println!("{}", avg);
-    let _student_passed: Score = pass_student(&data);
+    let avg = Score::get_avg(&data.score_of_each_subject); // To get Average
+    println!("Avg: {}", avg);
+    let student_passed: Score = pass_student(&data); // To Pass Student
+
+    Score::compare_student(&student_passed); //Print difference of each subject’s score.
 }
 
 impl Student {
@@ -105,6 +98,32 @@ impl Score {
         let avg = self.hindi + self.maths + self.english + self.science;
         let result: i32 = avg / 4;
         result
+    }
+    fn compare_student(student_one: &Score) {
+        let student_two = Score {
+            //Declaring Second Student
+            hindi: 80,
+            english: 70,
+            maths: 60,
+            science: 50,
+        };
+        println!("Differences are as follows:");
+        println!(
+            "Hindi: {}",
+            student_two.hindi - student_one.hindi
+        ); //Hindi_Difference
+        println!(
+            "Maths: {}",
+            student_two.maths - student_one.maths
+        ); //Maths_Difference
+        println!(
+            "English: {}",
+            student_two.english - student_one.english
+        ); //English_Difference
+        println!(
+            "Science: {}",
+            student_two.science - student_one.science
+        ); //Science_Difference
     }
 }
 
