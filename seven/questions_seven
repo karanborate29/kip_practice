@@ -1,0 +1,22 @@
+ ***** Use string reference instead of string.
+
+Q:1:  Write a program of Pattern searching and substring generation. Use proper directory structure /Package and modules for the function. 
+Pattern Searching: 
+		String= “Pankaj Chaudhary”		pattern=”Cha”
+		Return= Pattern Found at index 7.
+
+Substring generation:
+		String= “pa”
+		Substrings= [“p”, “a”, “pa”]
+
+Q:2: Write a function to get desired output ?
+
+Input :- Three Strings => str1 =  “jjdhid”  str2 = “ikjhjk”  str3 = “rtysgi”
+
+Output :- One String => “itdsgk”  
+
+Hint{
+Even Position of Output String :- Suppose :-  d & k => d
+Odd Position of Output String :-   d & k => k
+(*Position starts from 0)
+}
