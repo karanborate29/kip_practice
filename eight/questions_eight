@@ -1,0 +1,7 @@
+Q:1: Write a program of even numbers which can return the Result type. We have to handle the response of the function. 
+We also have to write the automated tests for the function with proper directory structure.
+
+Q:2 Write automated test cases for the both Assignment 6 questions with proper directory structure 
+
+Q:3: Practice code of the error handling and Automated tests.
+Ans: https://github.com/karanborate29/Error_Handling/blob/master/error_testing/src/main.rs
