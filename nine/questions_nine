@@ -1,0 +1,6 @@
+Q.1       a) Create a generic function to get min of 2 values ?
+	        b) Create a generic function to sort the element of array?
+
+Q.2: Implement a custom Iterator trait for a struct named GeometricSeries that has 3 fields first_number, current_number and ratio of type i32.
+The iterator should return the next 11 numbers in geometric progression?
+hint: Use .take(11) to get the next 11 in for loop.
