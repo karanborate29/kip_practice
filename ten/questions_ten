@@ -1,0 +1,12 @@
+Q 1: Write a function: fn sumConditional(map: Map[String, Int], str: String): Int Takes: a map of name -> age and returns the sum of ages for which the name contains the str Sample input: val map = Map("anurag" -> 24, "daniel" -> 23, "anushka" -> 30) val str = "anu" sumConditional(map, str) should return 54.
+
+Q 2: 
+a). Find out whether a list is a palindrome. Example: Input: isPalindrome(Vec(1, 2, 3, 2, 1)) Output: true 
+b). Get the reverse of a List. 
+c). In a seq find out the first even number. Example: Input: firstEven(Vec(1,21,3,4,5)) Output: 4 
+d). Remove continuously occurring duplicates from a List. Example: Input: compress(Vec(1, 1, 1, 1, 2, 3, 3, 1, 1, 4, 5, 5, 5, 5)) Output: Vec(1, 2, 3, 1, 4, 5) 
+e). Add duplicates of the elements. Example: Input: duplicate(Vec(1, 2, 3, 3, 4)) Output: Vec(1, 1, 2, 2, 3, 3, 3, 3, 4, 4) 
+f). Remove every Nth element. Example: Input: drop(3, Vec(1,2,3,4,5,6,7,8,9,10,11)) Output: Vec(1,2,4,5,6,7,8,9,10,11)
+
+Q:3: Practice IO exercise given in the book with proper understanding.
+Ans: 
