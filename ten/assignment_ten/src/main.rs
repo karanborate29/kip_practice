@@ -61,25 +61,25 @@ mod tests {
     fn reverse_success() {
         let original_list: Vec<i32> = vec![1, 2, 3, 4, 5];
         let _reverse: Vec<i32> = get_rev(original_list);
+        assert_eq!(vec![5, 4, 3, 2, 1], _reverse);
     }
     #[test]
     fn reverse_fail() {
         let original_list: Vec<i32> = vec![1, 2, 3, 4, 5];
         let _reverse: Vec<i32> = get_rev(original_list);
+        assert_ne!(vec![1, 2, 3, 4, 5], _reverse);
     }
     #[test]
     fn duplicate_success() {
         let single_vec: Vec<i32> = vec![1, 2, 3, 3, 4];
         let _dup_vec: Vec<i32> = duplicate(single_vec);
-        //    let answer:Vec<i32>=vec![1, 1, 2, 2, 3, 3, 3, 3, 4, 4];
-        //    assert_eq!(vec_compare(&answer, &dup_vec), true);
+        assert_eq!(vec![1, 1, 2, 2, 3, 3, 3, 3, 4, 4], _dup_vec);
     }
     #[test]
     fn duplicate_fail() {
         let single_vec: Vec<i32> = vec![];
         let _dup_vec: Vec<i32> = duplicate(single_vec);
-        //    let answer:Vec<i32>=vec![];
-        //    assert_eq!(vec_compare(&answer, &dup_vec), true);
+        assert_ne!(vec![1, 1, 2, 2, 3, 3, 3, 3, 4, 4], _dup_vec);
     }
 }
 
