@@ -9,4 +9,4 @@ e). Add duplicates of the elements. Example: Input: duplicate(Vec(1, 2, 3, 3, 4)
 f). Remove every Nth element. Example: Input: drop(3, Vec(1,2,3,4,5,6,7,8,9,10,11)) Output: Vec(1,2,4,5,6,7,8,9,10,11)
 
 Q:3: Practice IO exercise given in the book with proper understanding.
-Ans: 
+Ans: https://github.com/karanborate29/kip_practice/tree/master/minigrep
