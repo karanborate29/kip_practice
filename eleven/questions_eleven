@@ -1,0 +1,10 @@
+*** Use Recursion in this assignment
+Q.1:  In a seq find out the first repeated number. Example: Input: firstRepeated (List(1,21,21,4,5,5)) 
+Output: 21
+
+Q.2: Find the 2nd repeated number. Example secondRepeated (List(2,3,5,5,2,7,7,8,9))
+
+Q.3 Find Nth element from the list Input : Nth(List(1,2,3,4,5),3) 
+Output: 4?
+
+Q.4 In a seq find out the third odd number. Example: Input: thirdOdd(List(1,21,3,4,5)) Output: 3 ?
